@@ -1,7 +1,18 @@
 [project]
 name = "polycalendar"
-version = "0.1.0"
+dynamic = ["version"]
 description = "calendar synthesis software"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "aiohttp>=3.12.9",
+    "cuddly-dicts>=3.0.2",
+    "fastapi>=0.115.12",
+    "hypercorn>=0.17.3",
+    "ics>=0.7.2",
+    "pydantic>=2.11.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

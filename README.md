@@ -8,7 +8,7 @@
             srcset="polycalendar-dark.svg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
         />
-        <img src="polycalendar-dark.svg" height="32" alt="Trusty logo" />
+        <img src="polycalendar-dark.svg" height="64" alt="Trusty logo" />
     </picture>
 </h1>
 
