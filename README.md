@@ -17,6 +17,12 @@ different calendars.
 
 ## How do I use it?
 
+Install Polycalendar:
+
+```sh
+pip install git+https://github.com/iamawatermelo/Polycalendar
+```
+
 Write a config file:
 
 ```kdl
@@ -24,30 +30,14 @@ Write a config file:
 
 calendar "public" {
     source "https://calendar.google.com/calendar/ical/me%40polycalendar.srh.dog/public/basic.ics" { 
-        transform "polycalendar/filter" {
-            include "name"
-            include "location"
-            
-            set "color" value="turquoise"
-        }
+        transform "polycalendar/null" dummy=0
     }
     
     source "https://calendar.google.com/calendar/ical/work%40polycalendar.srh.dog/public/basic.ics" {
-        transform "polycalendar/redact" {
-            description "Busy"
-            padding (minutes)10
-            delete_overlaps true
-        }
-        
-        transform "polycalendar/filter" {
-            set "color" value="red"
-        }
+        transform "polycalendar/null" dummy=0
     }
     
-    transform "polycalendar/truncate" {
-        beginning date="now"
-        end date="now" offset=(weeks)4
-    }
+    transform "polycalendar/null" dummy=0
 }
 ```
 
@@ -58,7 +48,7 @@ calendar "public" {
 > 
 > You can use `polycalendar/null` for now.
 > ```
-> transformation "polycalendar/null" dummy=0
+> transform "polycalendar/null" dummy=0
 > ```
 
 Run:
