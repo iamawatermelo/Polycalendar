@@ -15,6 +15,8 @@
 Polycalendar is a calendar tool to synthesise, publish and view multiple
 different calendars.
 
+![An image showing how Polycalendar has combined two calendars](/demo.png)
+
 ## How do I use it?
 
 Install Polycalendar:
@@ -23,7 +25,11 @@ Install Polycalendar:
 pip install git+https://github.com/iamawatermelo/Polycalendar
 ```
 
-Write a config file:
+Write a config file (but with your own ICS files):
+
+> [!TIP]
+> You can use something like `file:///home/sarah/Downloads/basic.ics` to
+> reference something on your drive.
 
 ```kdl
 // file.kdl
